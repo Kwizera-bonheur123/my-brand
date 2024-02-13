@@ -11,6 +11,7 @@
     margin: 0;
     box-sizing: border-box;
     list-style: none;
+    font-family: 'Poppins', sans-serif;
 }
 
 a {
@@ -117,8 +118,9 @@ html {
 
 .landing-page{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
     align-items: center;
+    margin-top: 8%;
 }
 
 
@@ -164,13 +166,6 @@ html {
 }
 
 .right {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.right {
     width: 400px;
     height: 400px;
 }
@@ -182,17 +177,41 @@ html {
     max-height: 100%; 
 }
 
-
-.cycle {
-    background-color: #363636;
-    width: 400px;
-    height: 400px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    box-shadow: 0 0 10px var(--third);
+.about{
+    padding-left: 6%;
+    padding-right: 3%;
+    width: 88%;
+    margin-top: 10%;
 }
+.about h1{
+    color: var(--primary);
+    font-size: 35px;
+} 
 
+.content{
+    align-items: center;
+    display: flex;
+    gap: 10%;
+}
+.content p{
+    color: white;
+    font-size: 17px;
+    width: 60%;
+    height: 78%;
+}
+.content .avatar{
+    width: 470px;
+}
+.content img{
+    max-width: 100%;
+    height: auto;
+}
+.head{
+    display: flex;
+}
+.head .blacket{
+    color: white;
+}
 @media only screen and (max-width: 600px) {
     .icons {
         display: block;
