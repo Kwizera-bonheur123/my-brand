@@ -42,14 +42,14 @@ html {
 .nav-container {
     display: flex;
     align-items: center;
-    gap: 55%;
+    gap: 45%;
 }
 
 .home {
-    padding-left: 3%;
+    padding-left: 6%;
     padding-top: 2%;
     padding-right: 3%;
-    width: 94%;
+    width: 88%;
 }
 
 .social-medias {
@@ -115,6 +115,84 @@ html {
     color: white;
 }
 
+.landing-page{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+
+.left h5{
+    color: white;
+    font-size: 17px;
+    margin-bottom: 18px;
+}
+
+.left h1{
+    color: var(--primary);
+    width: 44%;
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.left h2{
+    color: white;
+    font-size: 39px;
+    margin-bottom: 30px;
+}
+
+.experiences {
+    display: flex;
+    gap: 7%;
+}
+
+.experiences .experience, .experiences .projects{
+    display: flex;
+    gap: 10%;
+    align-items: center;
+}
+
+.experiences .experience .number, .experiences .projects .number{
+    font-size: 52px;
+    color: #828282;
+}
+
+.experiences .experience p, .experiences .projects p{
+    color: #828282;
+    font-size: medium;
+    width: 50%;
+}
+
+.right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.right {
+    width: 400px;
+    height: 400px;
+}
+
+.right img {
+    width: 100%;
+    height: auto; 
+    max-width: 100%;
+    max-height: 100%; 
+}
+
+
+.cycle {
+    background-color: #363636;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 0 10px var(--third);
+}
+
 @media only screen and (max-width: 600px) {
     .icons {
         display: block;
@@ -130,8 +208,12 @@ html {
         flex-direction: column;
         width: 94%;
         gap: 15px; 
+        left: -1000;
+        transition: 0.3s;
     }
-
+    .nav-container .active{
+        left: 0;
+    }
     .logo {
         font-size: 40px;
     }
