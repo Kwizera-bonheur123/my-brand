@@ -40,7 +40,7 @@ html {
     gap: 15%;
 }
 
-.nav-container {
+#nav-container {
     display: flex;
     align-items: center;
     gap: 45%;
@@ -87,8 +87,7 @@ html {
     gap: 15px;
 }
 
-.linkedIn .icon,
-.Github .icon {
+.linkedIn .icon, .Github .icon {
     font-size: 30px;
     color: white;
 }
@@ -183,7 +182,7 @@ html {
     width: 88%;
     margin-top: 10%;
 }
-.about h1{
+.about h1, .skills h1{
     color: var(--primary);
     font-size: 35px;
 } 
@@ -212,29 +211,77 @@ html {
 .head .blacket{
     color: white;
 }
+
+.skills{
+    padding-left: 6%;
+    padding-right: 3%;
+    width: 100%;
+    margin-top: 6%;
+    background-color: #161616;
+    padding-top: 4%;
+    padding-bottom: 5%;
+}
+
+.skill{
+    display: flex;
+    gap: 5%;
+    margin-top: 5%;
+}
+.skill img {
+    width: 90px;
+    height: auto;
+}
 @media only screen and (max-width: 600px) {
     .icons {
         display: block;
+        font-size: 70px;
     }
 
     .nav-bar {
         justify-content: space-between;
     }
 
-    .nav-container {
-        top: 12.5%;
+    .nav-container-responsive {
+        top: 9.5%;
         position: fixed;
         flex-direction: column;
         width: 94%;
         gap: 15px; 
-        left: -1000;
         transition: 0.3s;
+        background-color: var(--secondary);
+        height: 100%;
+        left: 0;
+        width: 100%;
+        padding-top: 10%;
+        background-color: #828282;
     }
+    #nav-container {
+        top: 9.5%;
+        position: fixed;
+        flex-direction: column;
+        width: 94%;
+        gap: 15px; 
+        transition: 0.3s;
+        background-color: var(--secondary);
+        height: 100%;
+        width: 100%;
+        padding-top: 10%;
+        background-color: #70FF00;
+    }
+    
+.social-medias .linkedIn p,
+.social-medias .Github p {
+    font-size: 50px;
+}
+
+.linkedIn .icon, .Github .icon {
+    font-size: 60px;
+}
     .nav-container .active{
         left: 0;
     }
     .logo {
-        font-size: 40px;
+        font-size: 92px;
     }
 
     .links,.social-medias, .buttons {
@@ -243,6 +290,12 @@ html {
     }
 
     .links a {
-        font-size: 25px;
+        font-size: 50px;
+        font-weight: 400;
+    }
+    .buttons button {
+        padding: 24px 135px;
+        font-weight: 800;
+        font-size: 20px;
     }
 }
