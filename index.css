@@ -404,6 +404,45 @@ html {
     flex-wrap: wrap;
     margin-top: 3%;
   }
+  .contact{
+    padding: 4% 6%;
+    background-color: var(--secondary);
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+  }
+  .contact .touch{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .contact .touch h1{
+    color: var(--primary);
+  }
+  .contact .touch p{
+    color: white;
+    width: 500px;
+  }
+
+  .contact .touch .telephone, .contact .touch .email, .contact .touch .linkedIn{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+  .contact .touch i{
+    color: var(--primary);
+    font-size: 30px;
+    border: 1px solid var(--primary);
+    border-radius: 50%;
+    padding: 12px;
+  }
+  .contact .touch .linkedIn p{
+    width: 55%;
+  }
+
+  .contact .form{
+    border: var(--primary);
+  }
+
 @media only screen and (max-width: 600px) {
     .icons {
         display: block;
