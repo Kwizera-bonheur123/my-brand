@@ -319,7 +319,81 @@ html {
     display: flex;
     justify-content: center;
   }
-  
+
+  .my-blog{
+    padding: 5% 6%;
+    background-color: var(--secondary);
+  }
+
+  .my-blog .card{
+    background-color: var(--third);
+    padding: 1.5%;
+    display: flex;
+    flex-direction: column; 
+    gap: 2%; 
+    height: 76%;
+  }
+  .my-blog .card img{
+    height: 50%;
+  }
+  .my-blog .card .title{
+    font-weight: medium;
+    color: white;
+  }
+  .my-blog .card .description{
+    color:rgb(183, 183, 183);
+    font-weight: 400;
+    font-size: 14px;
+  }
+
+  .my-blog .card .profile{
+    display: flex;
+    align-items: center;
+    gap: 5%;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .my-blog .card .profile img{
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+  }
+
+  .writter-name{
+    color: white;
+    font-size: 15px;
+  }
+
+  .writter-position{
+    font-weight: 100;
+    color: white;
+    font-size: 13px;
+  }
+
+  .reaction{
+    display: flex;
+    width: 55%;
+    gap: 12%;
+  }
+  .reaction .like{
+    display: flex;
+    align-items: center;
+  }
+
+  .reaction .like i{
+    color: var(--primary);
+    font-size: 27px;
+  }
+  .reaction .like p{
+    color: white;
+  }
+
+  .card .footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 @media only screen and (max-width: 600px) {
     .icons {
         display: block;
