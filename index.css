@@ -182,10 +182,11 @@ html {
     width: 88%;
     margin-top: 10%;
 }
-.about h1, .skills h1{
+.about h1, .skills h1, .projects-section h1{
     color: var(--primary);
     font-size: 35px;
 } 
+
 
 .content{
     align-items: center;
@@ -231,6 +232,42 @@ html {
     width: 90px;
     height: auto;
 }
+
+.projects-section{
+    padding-top: 5%;
+}
+.projects-section .head{
+    margin-left: 6%;
+}
+
+.project {
+    display: flex;
+    justify-content: space-between;
+    overflow-x: auto;
+    white-space: nowrap;
+    margin: 4% 0;
+  }
+  
+  .card {
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    border: 2px solid white;
+    border-radius: 12px;
+    box-sizing: border-box;
+  }
+  
+  .card img {
+    width: 100%;
+    display: block;
+    border-radius: 12px;
+  }
+  
+  .project_name {
+    text-align: center;
+    margin-top: 10px;
+    color: white;
+  }
+  
 @media only screen and (max-width: 600px) {
     .icons {
         display: block;
