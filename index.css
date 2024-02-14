@@ -103,6 +103,8 @@ html {
 
 .button-container {
     padding: 3px;
+    width: fit-content;
+    height: fit-content;
     border-radius: 15px;
     background: rgb(255, 255, 255);
     background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(46, 255, 0, 1) 100%);
@@ -182,11 +184,10 @@ html {
     width: 88%;
     margin-top: 10%;
 }
-.about h1, .skills h1, .projects-section h1{
+.head h1{
     color: var(--primary);
     font-size: 35px;
 } 
-
 
 .content{
     align-items: center;
@@ -267,6 +268,57 @@ html {
     margin-top: 10px;
     color: white;
   }
+
+  .companies{
+    padding: 5% 6%;
+    background-color: var(--secondary);
+  }
+
+  .company-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 6%;
+  }
+
+  .divid{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .circle{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 4px solid var(--primary);
+  }
+  .line{
+    width: 2px;
+    height: 29%;
+    background-color: var(--primary);
+  }
+
+  .title{
+    text-align: center;
+    color: var(--primary);
+  }
+
+  .company-list .list{
+    display: grid;
+    gap: 4px;
+    height: 200px;
+  }
+
+  .company-list p{
+    color: white;
+    font-size: 12px;
+    font-weight: 200;
+    width: 100%;
+  }
+
+  .company-list .buttons{
+    display: flex;
+    justify-content: center;
+  }
   
 @media only screen and (max-width: 600px) {
     .icons {
@@ -303,7 +355,7 @@ html {
         height: 100%;
         width: 100%;
         padding-top: 10%;
-        background-color: #70FF00;
+        background-color: var(--third);
     }
     
 .social-medias .linkedIn p,
