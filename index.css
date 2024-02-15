@@ -38,6 +38,7 @@ html {
     display: flex;
     align-items: center;
     gap: 15%;
+    position: fixed;
 }
 
 #nav-container {
@@ -408,7 +409,9 @@ html {
     padding: 4% 6%;
     background-color: var(--secondary);
     display: grid;
-    grid-template-columns: 1fr 1fr; 
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    align-items: center;
+    grid-auto-flow: dense;
   }
   .contact .touch{
     display: flex;
@@ -440,9 +443,48 @@ html {
   }
 
   .contact .form{
-    border: var(--primary);
+    border: 2px solid var(--primary);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 2% 6%;
   }
 
+  .contact .form h1{
+    color: var(--primary);
+    text-align: center;
+    font-weight: 400;
+  }
+  .contact .form .field{
+    display: grid;
+  }
+  .contact .form .field label{
+    color: white;
+    font-size: 20px;
+  }
+  .contact .form .field input{
+    background-color: var(--secondary);
+    border: 2px solid var(--primary);
+    border-radius: 10px;
+    height: 45px;
+    padding: 1% 3%;
+  }
+  .contact .form .field input[type="text-area"]{
+    height: 95px;
+  }
+  .contact .form .buttons{
+    display: flex;
+    justify-content: center;
+  }
+  .contact .form .buttons button{
+    background-color: var(--secondary);
+    font-size: 20px;
+    font-family: 100px;
+    display: flex;
+    justify-content: center;
+    width: 200px;
+  }
 @media only screen and (max-width: 600px) {
     .icons {
         display: block;
@@ -452,62 +494,55 @@ html {
     .nav-bar {
         justify-content: space-between;
     }
-
-    .nav-container-responsive {
-        top: 9.5%;
-        position: fixed;
-        flex-direction: column;
-        width: 94%;
-        gap: 15px; 
-        transition: 0.3s;
-        background-color: var(--secondary);
-        height: 100%;
-        left: 0;
-        width: 100%;
-        padding-top: 10%;
-        background-color: #828282;
-    }
     #nav-container {
-        top: 9.5%;
-        position: fixed;
-        flex-direction: column;
-        width: 94%;
-        gap: 15px; 
-        transition: 0.3s;
-        background-color: var(--secondary);
-        height: 100%;
-        width: 100%;
-        padding-top: 10%;
-        background-color: var(--third);
+      top: 12.5%;
+      position: fixed;
+      flex-direction: column;
+      width: 100%;
+      gap: 15px; 
+      transition: 0.3s;
+      background-color: var(--secondary);
+      height: 100%;
+      width: 100%;
+      left: 0;
+      padding-top: 10%;
+      padding-left: 10%;
+      align-items: flex-start;
+      background-color: #828282;
     }
     
 .social-medias .linkedIn p,
 .social-medias .Github p {
-    font-size: 50px;
+    font-size: 20px;
 }
 
 .linkedIn .icon, .Github .icon {
-    font-size: 60px;
+    font-size: 30px;
 }
-    .nav-container .active{
-        left: 0;
-    }
     .logo {
         font-size: 92px;
     }
 
-    .links,.social-medias, .buttons {
+    .links{
+      flex-direction: column;
+      gap: 15px;
+      width: 100%;
+    }
+
+    .social-medias, .buttons {
         flex-direction: column;
         gap: 15px;
     }
 
     .links a {
-        font-size: 50px;
-        font-weight: 400;
+        font-size: 20px;
+        width: 100%;
+        font-weight: 400; 
     }
     .buttons button {
-        padding: 24px 135px;
-        font-weight: 800;
-        font-size: 20px;
+      width: 180px;
+      padding: 12px 45px;
+      border-radius: 15px;
+      font-weight: 800;
     }
 }

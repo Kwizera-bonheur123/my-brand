@@ -40,9 +40,9 @@
             </div>
           </div>
         </div>
-        <div onclick="openSidebar()" id="icons" class="icons">
-          <span id="bar"><i class="fa-solid fa-bars"></i></span>
-          <span id="bar"><i class="fa-solid fa-xmark"></i></span>
+        <div id="icons" class="icons">
+          <span onclick="openSidebar()" id="open"><i class="fa-solid fa-bars"></i></span>
+          <span onclick="closeSidebar()" id="close"><i class="fa-solid fa-xmark"></i></span>
         </div>
       </nav>
       <div class="landing-page">
@@ -318,19 +318,21 @@
       <div class="form">
         <h1>Send message</h1>
         <div class="field">
-          <label>Name</label>
+          <label>Name:</label>
           <input type="text" placeholder="Enter your names" />
         </div>
         <div class="field">
-          <label>Email</label>
+          <label>Email:</label>
           <input type="email" placeholder="Enter your email" />
         </div>
         <div class="field">
-          <label>Message</label>
+          <label>Message:</label>
           <input type="text-area" />
         </div>
-        <div class="button-container">
-          <button>Send</button>
+        <div class="buttons">
+          <div class="button-container">
+            <button>Send</but ton>
+          </div>
         </div>
       </div>
     </div>
