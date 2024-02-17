@@ -34,7 +34,6 @@ html {
 }
 
 .nav-bar { 
-  
     top:0;
     width: 100%;
     display: flex;
@@ -48,7 +47,7 @@ html {
 #nav-container {
     display: flex;
     align-items: center;
-    gap: 30%;
+    gap: 40%;
 }
 
 .home {
@@ -59,7 +58,7 @@ html {
 
 .social-medias {
     display: flex;
-    gap: 5%;
+    gap: 10%;
 }
 
 .social-medias .linkedIn,
@@ -386,7 +385,7 @@ html {
   .reaction{
     display: flex;
     width: 55%;
-    gap: 12%;
+    gap: 6%;
   }
   .reaction .like{
     display: flex;
@@ -403,7 +402,7 @@ html {
 
   .card .footer{
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
   }
 
@@ -492,6 +491,168 @@ html {
     display: flex;
     justify-content: center;
     width: 200px;
+  }
+.single_blog{
+  margin-top: 10%;
+  padding-left: 6%;
+  padding-right: 6%;
+  padding-bottom: 8%;
+  height: fit-content;
+  background-color: transparent;
+}
+
+.single_blog .card{
+  display: grid;
+  gap: 3%;
+  height: fit-content;
+  background-color: transparent;
+  padding-bottom: 8%;
+}
+
+  .single_blog .card img {
+    width: 100%;
+    max-height: 450px; 
+    object-fit: cover;
+    border-radius: 10px; 
+  }
+  
+  .single-blog .card .title{
+    font-weight: medium;
+    color: white;
+    font-size: 55px;
+  }
+  .single_blog .card .description{
+    color:rgb(183, 183, 183);
+    font-weight: 400;
+    font-size: 22px;
+  }
+
+  .single_blog .card .profile{
+    display: flex;
+    align-items: center;
+    gap: 5%;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .single_blog .card .profile img{
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+  }
+
+  .single_blog .writter-name{
+    color: white;
+    font-size: 30px;
+  }
+
+  .single_blog .writter-position{
+    font-weight: 100;
+    color: white;
+    font-size: 15px;
+  }
+
+  .single_blog .reaction{
+    display: flex;
+    width: 55%;
+    gap: 12%;
+  }
+  .single_blog .reaction .like{
+    display: flex;
+    align-items: center;
+  }
+
+  .single_blog .reaction .like i{
+    color: var(--primary);
+    font-size: 47px;
+  }
+  .reaction .like p{
+    color: white;
+    font-size: 25px;
+  }
+
+  .card .footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+
+  .comment-form {
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .comment-form input[type="text"] {
+    width: 60%;
+    padding: 10px 0 5px 2%;
+    border: none;
+    border-bottom: 3px solid #FFFFFF;
+    outline: none;
+    font-size: 16px;
+    color: #363636;
+    background-color: transparent;
+  }
+  
+  .comment-form input[type="text"]::placeholder {
+    color: #ABABAB;
+  }
+  
+  .buttons {
+    width: 60%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+  }
+  
+  .buttons button {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 3px solid;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .buttons .cancel {
+    background-color: transparent;
+    color: #6f6f6f;
+    background-color: #363636;
+  }
+  
+  .buttons .Send {
+    background-color: #AAD786;
+    color: white;
+    border-color: #AAD786;
+  }
+  
+  .buttons button:hover {
+    opacity: 0.8;
+  }
+  .comment p{
+    color: white;
+    font-size: medium;
+    font-weight: 300;
+    width: 60%;
+  }
+
+  .comments{
+    display: grid;
+    gap: 7%;
+  }
+  .comment{
+    display: grid;
+    gap: 4%;
+  }
+  .single_blog .card .comments .profile{
+    align-items: normal;
+  }
+  .single_blog .card .comments .profile img{
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+  }
+  .Recent_comments{
+    color: white;
   }
 @media only screen and (max-width: 600px) {
     .icons {
