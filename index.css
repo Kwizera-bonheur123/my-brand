@@ -504,7 +504,6 @@ html {
   background-color: transparent;  
   padding-bottom: 8%;
   width: 100%;
-  background-color: green;
 }
 
   .single_blog .card img {
@@ -514,10 +513,11 @@ html {
     border-radius: 10px; 
   }
   
-  .single-blog .card .title{
+  .single_blog .card .title{
     font-weight: medium;
-    color: white;
-    font-size: 55px;
+    color: rgb(255, 255, 255);
+    font-size: 45px;
+    padding: 3% 0;
   }
   .single_blog .card .description{
     color:rgb(183, 183, 183);
@@ -568,6 +568,7 @@ html {
   }
 
   .single_blog .card .footer{
+    padding: 3% 0;
     width: 60%;
   }
 
@@ -636,6 +637,7 @@ html {
   }
   .single_blog .card .comments .profile{
     align-items: normal;
+    padding: 1% 0;
   }
   .single_blog .card .comments .profile img{
     width: 55px;
@@ -758,5 +760,8 @@ html {
     .single_blog .card .footer{
       width: 100%;
       justify-content: space-between;
+    }
+    .single_blog .card .title{
+      font-size:25px;
     }
 }
