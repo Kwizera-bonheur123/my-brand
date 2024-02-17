@@ -77,9 +77,13 @@
     text-decoration: none;
     color:#70FF00;
 }
-.right-section {
+.Login .right-section {
     display: flex;
     justify-content: left;
+  }
+  .Signup .right-section {
+    display: flex;
+    justify-content: end;
   }
   
   .right-section img {
@@ -95,4 +99,21 @@
   .check{
     display: flex;
     font-weight: 500;
+  }
+
+  @media only screen and (max-width: 600px){
+    .Login, .Signup{
+        grid-template-columns: 1fr;
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+    .Login h1, .Signup h1{
+        font-size: 35px;
+    }
+    .Login .right-section, .Signup .right-section{
+        display: none;
+    }
+    .Signup .left-section, .Login .left-section{
+        padding-right: 0;
+    }
   }

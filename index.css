@@ -402,7 +402,6 @@ html {
 
   .card .footer{
     display: flex;
-    /* justify-content: space-between; */
     align-items: center;
   }
 
@@ -492,21 +491,20 @@ html {
     justify-content: center;
     width: 200px;
   }
-.single_blog{
-  margin-top: 10%;
-  padding-left: 6%;
-  padding-right: 6%;
-  padding-bottom: 8%;
-  height: fit-content;
-  background-color: transparent;
-}
+
+  
+  .single_blog{
+    height: fit-content;
+    margin-top: 5%;
+   }
 
 .single_blog .card{
-  display: grid;
-  gap: 3%;
+  padding:3rem;
   height: fit-content;
-  background-color: transparent;
+  background-color: transparent;  
   padding-bottom: 8%;
+  width: 100%;
+  background-color: green;
 }
 
   .single_blog .card img {
@@ -553,9 +551,7 @@ html {
   }
 
   .single_blog .reaction{
-    display: flex;
-    width: 55%;
-    gap: 12%;
+    justify-content: end;
   }
   .single_blog .reaction .like{
     display: flex;
@@ -571,10 +567,8 @@ html {
     font-size: 25px;
   }
 
-  .card .footer{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  .single_blog .card .footer{
+    width: 60%;
   }
 
 
@@ -598,14 +592,14 @@ html {
     color: #ABABAB;
   }
   
-  .buttons {
+  .comment-buttons {
     width: 60%;
     display: flex;
     justify-content: flex-end;
     margin-top: 10px;
   }
   
-  .buttons button {
+  .comment-buttons button {
     display: inline-block;
     padding: 10px 20px;
     border: 3px solid;
@@ -613,31 +607,28 @@ html {
     cursor: pointer;
   }
   
-  .buttons .cancel {
+  .comment-buttons .cancel {
     background-color: transparent;
     color: #6f6f6f;
+    margin-right: 3%;
+    border-radius: 15px;
     background-color: #363636;
   }
   
-  .buttons .Send {
+    .comment-buttons .Send {
     background-color: #AAD786;
     color: white;
+    border-radius: 15px;
     border-color: #AAD786;
   }
   
-  .buttons button:hover {
+  .comment-buttons button:hover {
     opacity: 0.8;
   }
   .comment p{
     color: white;
     font-size: medium;
     font-weight: 300;
-    width: 60%;
-  }
-
-  .comments{
-    display: grid;
-    gap: 7%;
   }
   .comment{
     display: grid;
@@ -740,5 +731,32 @@ html {
     .content p, .contact .touch p{
       font-size: 12px;
     }
-    
+    .single_blog .card{
+      padding: 1rem;
+    }
+    .single_blog .card .comments .profile img{
+      width: 45px;
+      height: 35px;
+    }
+
+    .comment-form input[type="text"] {
+      width: 100%;
+    }
+    .comment-buttons {
+      width: 100%;
+    }
+    .single_blog .writter-name{
+      color: rgb(255, 255, 255);
+      font-size: 16px;
+    }
+  
+    .single_blog .writter-position{
+      font-weight: 100;
+      color: white;
+      font-size: 12px;
+    }
+    .single_blog .card .footer{
+      width: 100%;
+      justify-content: space-between;
+    }
 }
