@@ -677,6 +677,7 @@ html {
       padding-left: 10%;
       align-items: flex-start;
       background-color: var(--secondary);
+      display: none;
     }
     
 .social-medias .linkedIn p,
