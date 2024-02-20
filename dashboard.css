@@ -24,7 +24,7 @@ body{
 
 .grid-container{
     display: grid;
-    grid-template-columns: 260px 3fr;
+    grid-template-columns: 260px 1fr 1fr 1fr;
     grid-template-rows: 0.2fr 3fr;
     grid-template-areas: 
     'sidebar header header header'
@@ -199,12 +199,71 @@ body{
     font-weight: 400;
     color: white;
 }
+.table{
+    background-color: var(--secondary);
+    height: 95%;
+    border-radius: 15px;
+    padding: 20px;
+}
 
+.table .titles{
+    background-color: var(--third);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 1.5fr 1fr 1fr 1fr;
+    grid-template-areas: "image title description author likes comment action";
+    padding: 0 2%;
+    color: white;
+    height: 10%;
+    align-items: center;
 
+}
+
+.articles .article{
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 1.5fr 1fr 1fr 1fr;
+    grid-template-areas: "image title description author likes comment action";
+    margin-top: 30px;
+    padding-bottom: 50px;
+    color: white;
+    align-items: center;
+    height: 30px;
+    border-bottom: 2px solid var(--primary);
+}
+.articles .article p{
+    color: white;
+    font-size: 13px;
+}
+.articles img{
+    border-radius: 5%;
+    width: 100px;
+    height: 30px;
+}
+.image{
+    grid-area: image;
+}
+.title{
+    grid-area: title;
+}
+.description{
+    grid-area: description;
+}
+.author{
+    grid-area: author;
+}
+.likes{
+    grid-area: likes;
+}
+.Comments{
+    grid-area: comment;
+}
+.actions{
+    grid-area: action;
+}
 @media screen and (max-width : 992px){
     .grid-container{
         grid-template-columns: 1fr;
-        grid-template-rows: 0.2fr 3fr;
+        grid-template-rows: 0.2fr auto;
         grid-template-areas: 
         "header",
         "main";
