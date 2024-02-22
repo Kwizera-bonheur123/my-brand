@@ -32,15 +32,14 @@ body{
     height: 100vh;
 }
 
-.header {
+#header {
     grid-area: header;
     height: 70px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--secondary);
+    background-color: rgb(112, 112, 112);
     padding: 0 30px 0 30px;
-    box-shadow: 0 6px 7px -4px rgba(0,0,0,0.2);
 }
 
 .header-right{
@@ -137,6 +136,13 @@ body{
     font-size: 18px;
 }
 
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: blue;
+  }
+
 .sidebar-list-item:hover{
     background-color: rgba(255, 255, 255, 0.2);
     cursor: pointer;
@@ -164,6 +170,18 @@ body{
 .main-title{
     color: white;
     font-weight: 500; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.3%;
+}
+
+.main-title > a{
+    background-color: var(--secondary);
+    padding: 15px;
+    border-radius: 15px;
+    color: var(--primary);
+    text-decoration: none;
 }
 
 .main-cards{
@@ -171,11 +189,13 @@ body{
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap:20px;
     margin: 20px 0;
+    width: 100%;
 }
 
 .card{
     display: flex;
     justify-content: space-around;
+    width: 100%;
     padding: 25px;
     color: rgb(255, 255, 255);
     border-radius: 30px;
@@ -199,7 +219,15 @@ body{
     font-weight: 400;
     color: white;
 }
-.table{
+
+.charts{
+    width: 101%;
+    margin-top: 5.2%;
+    background-color: var(--secondary);
+    padding: 20px;
+    border-radius: 20px;
+}
+.table, .message-table{
     background-color: var(--secondary);
     height: 95%;
     border-radius: 15px;
@@ -216,7 +244,29 @@ body{
     color: white;
     height: 10%;
     align-items: center;
-
+}
+.message-table .titles{
+    background-color: var(--third);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 80px;
+    grid-template-areas: "image email message action";
+    padding: 0 2%;
+    color: white;
+    height: 10%;
+    align-items: center;
+}
+.message-table .titles .image{
+    grid-area: image;
+}
+.message-table .titles .email{
+    grid-area: email;
+}
+.message-table .titles .message{
+    grid-area: message;
+}
+.message-table .titles .action{
+    grid-area: action;
 }
 
 .articles .article{
@@ -229,6 +279,31 @@ body{
     align-items: center;
     height: 30px;
     border-bottom: 2px solid var(--primary);
+}
+.users .user{
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 80px;
+    grid-template-areas: "image email message action";
+    margin-top: 30px;
+    padding-bottom: 60px;
+    color: white;
+    align-items: center;
+    height: 30px;
+    border-bottom: 2px solid var(--primary);
+}
+.users .user .image{
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+}
+.users .user .email{
+    grid-area: email;
+}
+.users .user .message{
+    grid-area: message;
+}
+.users .user .action{
+    grid-area: asction;
 }
 .articles .article p{
     color: white;
@@ -262,13 +337,12 @@ body{
 }
 @media screen and (max-width : 992px){
     .grid-container{
-        grid-template-columns: 1fr;
+        grid-template-columns: 2fr;
         grid-template-rows: 0.2fr auto;
         grid-template-areas: 
         "header",
         "main";
     }
-
     #sidebar{
         display: none;
     }
@@ -290,10 +364,10 @@ body{
         grid-template-columns: 1fr;
         gap: 10px;
         margin-bottom: 0;
-    }
+   }
 }
 @media screen and (max-width: 576px) {
     .header-left{
         display: none;       
-       }   
+       }
 }
