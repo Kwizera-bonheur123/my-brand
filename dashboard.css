@@ -309,12 +309,11 @@ body{
     color: white;
     font-size: 13px;
 }
-.articles img{
+
+.image{
     border-radius: 5%;
     width: 100px;
     height: 30px;
-}
-.image{
     grid-area: image;
 }
 .title{
@@ -356,6 +355,13 @@ body{
     }
     .close{
         display: block;
+    }
+    .articles .article{
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-areas: "image title action";
+        margin-top: 10px;
+        padding-bottom: 50px;
     }
 }
 
