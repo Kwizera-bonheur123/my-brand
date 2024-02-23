@@ -81,7 +81,11 @@
             </div>
             <div class="one-field">
               <label>Description</label>
-              <input type="text" />
+              <textarea name="content" id="" cols="30" rows="10"></textarea>
+              <script src="./ckeditor/ckeditor.js"></script>
+              <script>
+                CKEDITOR.replace("content");
+              </script>
             </div>
             <div class="buttons">
               <button class="cancel">Cancel</button>
