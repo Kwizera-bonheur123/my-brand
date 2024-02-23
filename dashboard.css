@@ -281,7 +281,7 @@ body{
     height: 30px;
     border-bottom: 2px solid var(--primary);
 }
-.users .user{
+.message-table .user{
     display: grid;
     grid-template-columns: 1fr 2fr 2fr 80px;
     grid-template-areas: "image email message action";
@@ -292,19 +292,26 @@ body{
     height: 30px;
     border-bottom: 2px solid var(--primary);
 }
-.users .user .image{
+.message-table .user .image{
     height: 55px;
     width: 55px;
     border-radius: 50%;
 }
-.users .user .email{
+.message-table .user .email{
     grid-area: email;
 }
-.users .user .message{
+.message-table .user .message{
     grid-area: message;
 }
-.users .user .action{
-    grid-area: asction;
+.message-table .user .actions{
+    grid-area: action;
+}
+.message-table .user .actions button{
+    background-color: transparent;
+    border: none;
+    font-size: 25px;
+    color: var(--primary);
+    cursor: pointer;
 }
 .articles .article p{
     color: white;
