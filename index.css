@@ -670,7 +670,7 @@ html {
         justify-content: space-between;
     }
     #nav-container {
-      top: 12.5%;
+      top: 7.5%;
       position: fixed;
       flex-direction: column;
       width: 100%;

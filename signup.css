@@ -100,6 +100,12 @@
     display: flex;
     font-weight: 500;
   }
+  .Signup .left-section .field input[type="submit"],
+.Login .left-section .field input[type="submit"]{
+    background-color: #70FF00;
+    color: #343434;
+    font-weight: 900;
+}
 
   @media only screen and (max-width: 600px){
     .Login, .Signup{
