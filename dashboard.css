@@ -93,6 +93,7 @@ body{
     overflow-y: auto;
     transition: all 0.5s;
     -webkit-transition: all 0.5s;
+    z-index: 99;
 }
 
 .menu-icon{
