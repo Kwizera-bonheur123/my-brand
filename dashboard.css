@@ -233,6 +233,7 @@ body{
     height: 95%;
     border-radius: 15px;
     padding: 20px;
+    overflow-x: auto;
 }
 
 .table .titles{
