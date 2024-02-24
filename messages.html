@@ -1,8 +1,9 @@
-<!DOCTYPE html>
 <html>
   <head>
     <title>Admin dashboard</title>
     <link rel="stylesheet" href="./dashboard.css" />
+    <link rel="stylesheet" href="./users.css" />
+    <link rel="stylesheet" href="./messages.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -46,14 +47,12 @@
             </a>
           </li>
           <li class="sidebar-list-item">
-            <a href="articles.html">
+            <a href="./articles.html">
               <i class="fa-solid fa-print"></i> Articles
             </a>
           </li>
           <li class="sidebar-list-item">
-            <a href="users.html">
-              <i class="fa-sharp fa-solid fa-users"></i> Users
-            </a>
+            <a href="#"> <i class="fa-sharp fa-solid fa-users"></i> Users </a>
           </li>
           <li class="sidebar-list-item">
             <a href="messages.html">
@@ -64,64 +63,82 @@
       </aside>
       <main class="main-container">
         <div class="main-title">
-          <h2>MESSAGES</h2>
+          <h2>Users</h2>
         </div>
-        <div class="message-table">
-          <div class="titles">
-            <p class="image">Profile</p>
-            <p class="email">Email</p>
-            <p class="message">Message</p>
-            <p class="action">Action</p>
-          </div>
-          <div class="users">
-            <div class="user">
-              <img class="image" src="./images.jfif" />
-              <p class="email">kbonheur123@gmail.com</p>
-              <p class="message">The quickest way to deliv way to deliv.</p>
-              <div class="actions">
-                <a href="./reply.html"
-                  ><button><i class="fa-solid fa-paper-plane"></i></button
-                ></a>
-              </div>
-            </div>
-            <div class="user">
-              <img class="image" src="./images.jfif" />
-              <p class="email">kbonheur123@gmail.com</p>
-              <p class="message">The quickest way to deliv way to deliv.</p>
-              <div class="actions">
-                <button><i class="fa-solid fa-paper-plane"></i></button>
-              </div>
-            </div>
-            <div class="user">
-              <img class="image" src="./images.jfif" />
-              <p class="email">kbonheur123@gmail.com</p>
-              <p class="message">The quickest way to deliv way to deliv.</p>
-              <div class="actions">
-                <button><i class="fa-solid fa-paper-plane"></i></button>
-              </div>
-            </div>
-            <div class="user">
-              <img class="image" src="./images.jfif" />
-              <p class="email">kbonheur123@gmail.com</p>
-              <p class="message">The quickest way to deliv way to deliv.</p>
-              <div class="actions">
-                <button><i class="fa-solid fa-paper-plane"></i></button>
-              </div>
-            </div>
-            <div class="user">
-              <img class="image" src="./images.jfif" />
-              <p class="email">kbonheur123@gmail.com</p>
-              <p class="message">The quickest way to deliv way to deliv.</p>
-              <div class="actions">
-                <a href="./reply.html"
-                  ><button><i class="fa-solid fa-paper-plane"></i></button
-                ></a>
-              </div>
-            </div>
-          </div>
+        <div class="users-list">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Profile</th>
+                <th>Email</th>
+                <th>Message</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><img src="./person_1 1.svg" /></td>
+                <td>kbonheur@gmail.com</td>
+                <td>In publishing and graphic design, Lorem ipsum is .....</td>
+                <td>
+                  <a href="./reply.html">
+                    <button>
+                      <i class="fa-solid fa-paper-plane"></i>
+                      <p>Reply</p>
+                    </button>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td><img src="./person_1 1.svg" /></td>
+                <td>kbonheur@gmail.com</td>
+                <td>In publishing and graphic design, Lorem ipsum is .....</td>
+                <td>
+                  <button>
+                    <i class="fa-solid fa-paper-plane"></i>
+                    <p>Reply</p>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td><img src="./person_1 1.svg" /></td>
+                <td>kbonheur@gmail.com</td>
+                <td>In publishing and graphic design, Lorem ipsum is .....</td>
+                <td>
+                  <button>
+                    <i class="fa-solid fa-paper-plane"></i>
+                    <p>Reply</p>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td><img src="./person_1 1.svg" /></td>
+                <td>kbonheur@gmail.com</td>
+                <td>In publishing and graphic design, Lorem ipsum is .....</td>
+                <td>
+                  <button>
+                    <i class="fa-solid fa-paper-plane"></i>
+                    <p>Reply</p>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td><img src="./person_1 1.svg" /></td>
+                <td>kbonheur@gmail.com</td>
+                <td>In publishing and graphic design, Lorem ipsum is .....</td>
+                <td>
+                  <button>
+                    <i class="fa-solid fa-paper-plane"></i>
+                    <p>Reply</p>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </main>
     </div>
     <script src="./dashboard.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
   </body>
 </html>
