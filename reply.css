@@ -42,7 +42,7 @@
 }
 .subject{
     display: flex;
-    gap: 6%;
+    gap: 2%;
 }
 .to .email{
     padding: 5px 10px;
