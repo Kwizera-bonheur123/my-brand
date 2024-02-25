@@ -65,7 +65,7 @@
         <div class="main-title">
           <h2>ADD NEW ARTICLE</h2>
         </div>
-        <form class="form">
+        <div class="form" onsubmit="return validateForm()">
           <div class="contents">
             <div class="one-field">
               <label>Upload Image</label>
@@ -79,28 +79,37 @@
                   </p>
                 </div>
               </label>
+              <span class="error" id="image-error-message"></span>
             </div>
             <div class="one-field">
               <label>Title</label>
-              <input type="text" />
+              <input type="text" id="title" />
+              <span class="error" id="title-error-message"></span>
             </div>
             <div class="one-field">
               <label>Description</label>
-              <textarea name="content" id="" cols="30" rows="10"></textarea>
+              <textarea
+                name="content"
+                id="content"
+                cols="30"
+                rows="10"
+              ></textarea>
               <script src="./ckeditor/ckeditor.js"></script>
               <script>
                 CKEDITOR.replace("content");
               </script>
+              <span class="error" id="description-error-message"></span>
             </div>
             <div class="buttons">
               <button class="cancel">Cancel</button>
-              <button class="add">Add</button>
+              <button class="add" onclick="validateForm()">Add</button>
             </div>
           </div>
-        </form>
+        </div>
       </main>
     </div>
     <script src="./dashboard.js"></script>
+    <script src="./add_article.js"></script>
     <script src="./fileUpload.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
   </body>

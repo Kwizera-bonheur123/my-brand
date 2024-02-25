@@ -82,6 +82,9 @@
     background: rgb(255, 255, 255);
     background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(46, 255, 0, 1) 100%);
 }
+.error{
+    color: red;
+}
 
 @media screen and (max-width: 768px){
     .contents{
