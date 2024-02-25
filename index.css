@@ -336,9 +336,120 @@ html {
   }
 
   .my-blog{
+    background-color: green;
+    height: 100vh;
+    width: 100%;
     padding: 3% 6%;
-    background-color: var(--secondary);
+    /* background-color: var(--secondary); */
   }
+
+
+
+.blogs{
+    position: relative;
+    width: 100%;
+    height:100vh;
+    overflow: hidden;
+    background-color: green;
+}
+.item{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap:12px;
+    width: 400px;
+    height: fit-content;
+    text-align: justify;
+    background-color: #363636;
+    border-radius: 12px;
+    padding: 20px;
+    padding: 2% 1%;
+    gap:5px;
+    transition: 0.5s;
+    left: calc(50% - 110px);
+    top: 455%;
+}
+#next, #prev{
+    position: absolute;
+    top: 40%;
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    font-size: xxx-large;
+    font-family: monospace;
+    font-weight: bold;
+    left: 400px;
+}
+#next{
+    left: unset;
+    right: 15%;
+}
+
+.item img{
+    width: 100%;
+    max-height: 230px;
+  }
+ .item .title{
+    font-weight: medium;
+    color: white;
+  }
+  .item .description{
+    color:rgb(183, 183, 183);
+    font-weight: 400;
+    font-size: 14px;
+  }
+
+.item .profile{
+    display: flex;
+    align-items: center;
+    gap: 5%;
+    width: 100%;
+    justify-content: flex-start;
+  }
+.item .profile img{
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+  }
+
+  .writter-name{
+    color: white;
+    font-size: 15px;
+  }
+
+  .writter-position{
+    font-weight: 100;
+    color: white;
+    font-size: 13px;
+  }
+
+  .reaction{
+    display: flex;
+    width: 55%;
+    gap: 6%;
+  }
+  .reaction .like{
+    display: flex;
+    align-items: center;
+  }
+
+  .reaction .like i{
+    color: var(--primary);
+    font-size: 27px;
+  }
+  .reaction .like p{
+    color: white;
+  }
+
+  .item .footer{
+    display: flex;
+    align-items: center;
+  }
+
+
+
+
+
 
   .my-blog .card{
     width: 400px;
