@@ -498,6 +498,9 @@ html {
     justify-content: center;
     width: 200px;
   }
+  .contact .form span{
+    color: red;
+  }
 
   
   .single_blog{
