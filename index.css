@@ -19,10 +19,10 @@ a {
     text-decoration: none;
 }
 
-body {
+/* body {
     background: rgb(0, 0, 0);
     background: linear-gradient(133deg, rgba(0, 0, 0, 1) 0%, rgba(39, 39, 39, 1) 55%, rgba(114, 114, 114, 1) 100%);
-}
+} */
 
 html {
     scroll-behavior: smooth;
@@ -41,6 +41,8 @@ html {
     gap: 5%;
     position: fixed;
     padding-left: 4%;
+    z-index: 99;
+    box-shadow: 0 6px 7px -4px rgba(127, 127, 127, 0.2);
 }
 
 .sticky {
@@ -340,6 +342,7 @@ html {
     width: 100%;
     padding: 3% 6%;
     background-color: var(--secondary);
+    z-index: -99;
   }
 
 
@@ -350,7 +353,7 @@ html {
     height:100vh;
     overflow: hidden;
 }
-.item{
+.my-blog .item{
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -364,12 +367,12 @@ html {
     padding: 2% 1%;
     gap:5px;
     transition: 0.5s;
-    left: calc(50% - 110px);
-    top: 455%;
+    left: calc(48% - 110px);
+    top:  450%;
 }
 #next, #prev{
     position: absolute;
-    top: 40%;
+    top: 484%;
     color: #fff;
     background-color: transparent;
     border: none;
@@ -380,7 +383,7 @@ html {
 }
 #next{
     left: unset;
-    right: 15%;
+    right: 10%;
 }
 
 .item img{
@@ -452,7 +455,7 @@ html {
   .my-blog .card{
     width: 400px;
     margin-bottom: 20px;
-    background-color: var(--third);
+    background-color: var(--secondary);
     padding: 2% 1%;
     display: flex;
     flex-direction: column;
