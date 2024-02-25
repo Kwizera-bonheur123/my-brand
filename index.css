@@ -336,11 +336,10 @@ html {
   }
 
   .my-blog{
-    background-color: green;
     height: 100vh;
     width: 100%;
     padding: 3% 6%;
-    /* background-color: var(--secondary); */
+    background-color: var(--secondary);
   }
 
 
@@ -350,7 +349,6 @@ html {
     width: 100%;
     height:100vh;
     overflow: hidden;
-    background-color: green;
 }
 .item{
     position: absolute;
