@@ -1,58 +1,74 @@
-document.addEventListener("DOMContentLoaded", function() {
-  var form = document.querySelector('.form');
-  form.addEventListener('submit', function(e) {
-      e.preventDefault(); // Prevent the default form submission behavior
-      validateForm(e); // Call the validation function
-  });
-});
+var sidebar = document.getElementById("nav-container");
+var close = document.getElementById("close");
+var open = document.getElementById("open");
 
-function validateForm(e) {
-  var imageInput = document.getElementById("input-file");
-  var titleInput = document.getElementById("title");
-  var contentInput = document.getElementById("content");
+//function add the menu icon and remove close icon
 
-  var imageErrorMessage = document.getElementById("image-error-message");
-  var titleErrorMessage = document.getElementById("title-error-message");
-  var descriptionErrorMessage = document.getElementById("description-error-message");
+function openSidebar() {
+    sidebar.style.display = "flex";
+    close.style.display = "flex";
+    open.style.display = "none";
+    }
 
-  // Reset error messages
-  imageErrorMessage.textContent = "";
-  titleErrorMessage.textContent = "";
-  descriptionErrorMessage.textContent = "";
-
-  var isValid = true;
-
-  // Image validation
-  if (imageInput.files.length === 0) {
-      imageErrorMessage.textContent = "Please upload an image.";
-      isValid = false;
-  }
-
-  // Title validation
-  if (titleInput.value.trim() === "") {
-      titleErrorMessage.textContent = "Please enter a title.";
-      isValid = false;
-  }
-
-  // Description validation
-  if (contentInput.value.trim() === "") {
-      descriptionErrorMessage.textContent = "Please enter a description.";
-      isValid = false;
-  }
-
-  return isValid;
+function closeSidebar() {
+    sidebar.style.display = "none";
+    close.style.display = "none";
+    open.style.display = "flex";
 }
 
-function previewImage(event) {
-  var input = event.target;
-  var imgView = input.parentElement.querySelector("#img-view img");
+// When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
 
-  var file = input.files[0];
-  var reader = new FileReader();
+// Get the navbar
+var navbar = document.getElementById("nav-bar");
 
-  reader.onload = function () {
-      imgView.src = reader.result;
-  };
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop;
 
-  reader.readAsDataURL(file);
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.scrollY >= sticky) {
+    console.log("Scrolled");
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
 }
+
+
+let items = document.querySelectorAll('.slider .item');
+    let next = document.getElementById('next');
+    let prev = document.getElementById('prev');
+    
+    let active = 3;
+    function loadShow(){
+        let stt = 0;
+        items[active].style.transform = `none`;
+        items[active].style.zIndex = 1;
+        items[active].style.filter = 'none';
+        items[active].style.opacity = 1;
+        for(var i = active + 1; i < items.length; i++){
+            stt++;
+            items[i].style.transform = `translateX(${120*stt}px) scale(${1 - 0.2*stt}) perspective(16px) rotateY(-1deg)`;
+            items[i].style.zIndex = 1;
+            items[i].style.filter = 'blur(5px)';
+            items[i].style.opacity = stt > 2 ? 0 : 0.6;
+        }
+        stt = 0;
+        for(var i = active - 1; i >= 0; i--){
+            stt++;
+            items[i].style.transform = `translateX(${-120*stt}px) scale(${1 - 0.2*stt}) perspective(16px) rotateY(1deg)`;
+            items[i].style.zIndex = 1;
+            items[i].style.filter = 'blur(5px)';
+            items[i].style.opacity = stt > 2 ? 0 : 0.6;
+        }
+    }
+    loadShow();
+    next.onclick = function(){
+        active = active + 1 < items.length ? active + 1 : active;
+        loadShow();
+    }
+    prev.onclick = function(){
+        active = active - 1 >= 0 ? active - 1 : active;
+        loadShow();
+    }
