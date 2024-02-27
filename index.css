@@ -288,6 +288,25 @@ html {
     color: white;
   }
 
+
+
+  .projects-section .slider #next-project,.projects-section .slider #prev-project{
+  position: absolute;
+  top: 484%;
+  color: #e60505;
+  background-color: transparent;
+  border: none;
+  font-size: xxx-large;
+  font-family: monospace;
+  font-weight: bold;
+  left: 10%;
+}
+.projects-section .slider #next-project{
+  left: unset;
+  right: 10%;
+}
+
+
   .companies{
     padding: 5% 6%;
     background-color: var(--secondary);
@@ -371,11 +390,8 @@ html {
     transition: 0.5s;
     left: calc(43% - 110px);
 }
-.my-blog .item{
-}
-.projects-section .item{
-}
-#next, #prev{
+
+.my-blog .slider #next-blog,.my-blog .slider #prev-blog{
     position: absolute;
     top: 484%;
     color: #fff;
@@ -386,7 +402,7 @@ html {
     font-weight: bold;
     left: 10%;
 }
-#next{
+.my-blog .slider #next-blog{
     left: unset;
     right: 10%;
 }

@@ -70,23 +70,24 @@
             <p class="email">kwizerabonheur123@gmail.com</p>
           </div>
           <div class="subject">
-            <p>Subject:</p>
-            <input type="text" />
+            <div class="field">
+              <p>Subject:</p>
+              <input type="text" id="subject" />
+            </div>
+            <span class="error" id="subject-error-message"></span>
           </div>
           <div class="one-field">
             <label>Description</label>
             <textarea name="content" id="" cols="30" rows="10"></textarea>
             <script src="./ckeditor/ckeditor.js"></script>
-            <script>
-              CKEDITOR.replace("content");
-            </script>
+            <span id="description-error-message"></span>
           </div>
           <div class="buttons">
             <a href="./messages.html"
               ><i class="fa-sharp fa-solid fa-left-long"></i>
               <p>Go back</p></a
             >
-            <button>
+            <button onclick="validateForm()">
               <i class="fa-solid fa-paper-plane"></i>
               <p>Reply</p>
             </button>
@@ -94,6 +95,7 @@
         </div>
       </main>
     </div>
+    <script src="./reply.js"></script>
     <script src="./dashboard.js"></script>
   </body>
 </html>

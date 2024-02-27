@@ -36,39 +36,128 @@ function myFunction() {
 }
 
 
-let items = document.querySelectorAll('.slider .item');
-    let next = document.getElementById('next');
-    let prev = document.getElementById('prev');
+function validateForm() {
+    var name = document.getElementById('name').value.trim();
+    var email = document.getElementById('email').value.trim();
+    var message = document.getElementById('message').value.trim();
+
+    var nameError = document.getElementById('name-error-message');
+    var emailError = document.getElementById('email-error-message');
+    var messageError = document.getElementById('message-error-message');
+
+    var isValid = true;
+
+    // Validate name: should not contain any numbers
+    if (!/^[a-zA-Z]+$/.test(name)) {
+        nameError.innerText = "Name must not contain numbers";
+        isValid = false;
+    } else {
+        nameError.innerText = "";
+    }
+
+    // Validate email: using a simple regex for basic validation
+    if (!/^\S+@\S+\.\S+$/.test(email)) {
+        emailError.innerText = "Invalid email address";
+        isValid = false;
+    } else {
+        emailError.innerText = "";
+    }
+
+    // Validate message: should be at least 4 characters long
+    if (message.length < 4) {
+        messageError.innerText = "Message must be at least 4 characters long";
+        isValid = false;
+    } else {
+        messageError.innerText = "";
+    }
+
+    // If all fields are valid, submit the form
+    if (isValid) {
+        // Here you can submit the form or perform any other action
+        alert("Form submitted successfully!");
+    }
+}
+
+
+let blogs = document.querySelectorAll('.my-blog .slider .item');
+    let next = document.getElementById('next-blog');
+    let prev = document.getElementById('prev-blog');
     
     let active = 3;
     function loadShow(){
         let stt = 0;
-        items[active].style.transform = `none`;
-        items[active].style.zIndex = 1;
-        items[active].style.filter = 'none';
-        items[active].style.opacity = 1;
-        for(var i = active + 1; i < items.length; i++){
+        blogs[active].style.transform = `none`;
+        blogs[active].style.zIndex = 10;
+        blogs[active].style.filter = 'none';
+        blogs[active].style.opacity = 1;
+        for(var i = active + 1; i < blogs.length; i++){
             stt++;
-            items[i].style.transform = `translateX(${120*stt}px) scale(${1 - 0.2*stt}) perspective(16px) rotateY(-1deg)`;
-            items[i].style.zIndex = 1;
-            items[i].style.filter = 'blur(5px)';
-            items[i].style.opacity = stt > 2 ? 0 : 0.6;
+            blogs[i].style.transform = `translateX(${120*stt}px) scale(${1 - 0.2*stt}) perspective(16px) rotateY(-1deg)`;
+            blogs[i].style.zIndex = 1;
+            blogs[i].style.filter = 'blur(5px)';
+            blogs[i].style.opacity = stt > 2 ? 0 : 0.6;
         }
         stt = 0;
         for(var i = active - 1; i >= 0; i--){
             stt++;
-            items[i].style.transform = `translateX(${-120*stt}px) scale(${1 - 0.2*stt}) perspective(16px) rotateY(1deg)`;
-            items[i].style.zIndex = 1;
-            items[i].style.filter = 'blur(5px)';
-            items[i].style.opacity = stt > 2 ? 0 : 0.6;
+            blogs[i].style.transform = `translateX(${-120*stt}px) scale(${1 - 0.2*stt}) perspective(16px) rotateY(1deg)`;
+            blogs[i].style.zIndex = 1;
+            blogs[i].style.filter = 'blur(5px)';
+            blogs[i].style.opacity = stt > 2 ? 0 : 0.6;
         }
     }
     loadShow();
     next.onclick = function(){
-        active = active + 1 < items.length ? active + 1 : active;
+        active = active + 1 < blogs.length ? active + 1 : active;
         loadShow();
     }
     prev.onclick = function(){
         active = active - 1 >= 0 ? active - 1 : active;
         loadShow();
     }
+
+
+
+    document.addEventListener("DOMContentLoaded", function() {
+        let projects = document.querySelectorAll('.projects-section .slider .item');
+        let next_project = document.getElementById('next-project');
+        let prev_project = document.getElementById('prev-project');
+    
+        let active_project = 3;
+    
+        function loadShow(){
+            let stt = 0;
+            projects[active_project].style.transform = `none`;
+            projects[active_project].style.zIndex = 10;
+            projects[active_project].style.filter = 'none';
+            projects[active_project].style.opacity = 1;
+            for(var i = active_project + 1; i < projects.length; i++){
+                stt++;
+                projects[i].style.transform = `translateX(${120*stt}px) scale(${1 - 0.2*stt}) perspective(16px) rotateY(-1deg)`;
+                projects[i].style.zIndex = 1;
+                projects[i].style.filter = 'blur(5px)';
+                projects[i].style.opacity = stt > 2 ? 0 : 0.6;
+            }
+            stt = 0;
+            for(var i = active_project - 1; i >= 0; i--){
+                stt++;
+                projects[i].style.transform = `translateX(${-120*stt}px) scale(${1 - 0.2*stt}) perspective(16px) rotateY(1deg)`;
+                projects[i].style.zIndex = 1;
+                projects[i].style.filter = 'blur(5px)';
+                projects[i].style.opacity = stt > 2 ? 0 : 0.6;
+            }
+        }
+    
+        loadShow();
+    
+        next_project.onclick = function(){
+            active_project = active_project + 1 < projects.length ? active_project + 1 : active_project;
+            loadShow();
+        }
+    
+        prev_project.onclick = function(){
+            active_project = active_project - 1 >= 0 ? active_project - 1 : active_project;
+            loadShow();
+        }
+    });
+    
