@@ -6,14 +6,15 @@ var posts = JSON.parse(localStorage.getItem("Blogs"));
 
 var blog_posts = document.getElementById("blog-posts");
 for(let i = 0;i < posts.length;i++){
+    console.log(posts[i].description);
     let newDiv = document.createElement("div");
     newDiv.classList.add("item");
     newDiv.innerHTML = `
     <a href="./signle_blog.html">
             <img src="${posts[i].image}" />
           </a>
-          <h2 class="title">${posts[i].title}</h2>
-          <p class="description">${posts[i].description}</p>
+          <h2 class="title">${posts[i].title.substring(0,50) + ' ....'}</h2>
+          <div class="description">${posts[i].description.substring(0, 196) + ' .....'}</div>
           <div class="footer">
             <div class="profile">
               <img src="./person_1 1.svg" />
@@ -112,10 +113,10 @@ function validateForm() {
 let blogs = document.querySelectorAll('.my-blog .slider .item');
     let next = document.getElementById('next-blog');
     let prev = document.getElementById('prev-blog');
-    
-    let active = 3;
+    let active = 1;
     function loadShow(){
         let stt = 0;
+        console.log(blogs[active]);
         blogs[active].style.transform = `none`;
         blogs[active].style.zIndex = 10;
         blogs[active].style.filter = 'none';
