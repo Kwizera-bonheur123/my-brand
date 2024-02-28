@@ -2,7 +2,7 @@ var sidebar = document.getElementById("nav-container");
 var close = document.getElementById("close");
 var open = document.getElementById("open");
 var posts = JSON.parse(localStorage.getItem("Blogs"));
-
+console.log(posts)
 
 var blog_posts = document.getElementById("blog-posts");
 for(let i = 0;i < posts.length;i++){
@@ -10,7 +10,7 @@ for(let i = 0;i < posts.length;i++){
     let newDiv = document.createElement("div");
     newDiv.classList.add("item");
     newDiv.innerHTML = `
-    <a href="./signle_blog.html">
+    <a href="#" onclick="window.location.href = 'signle_blog.html'; return false;">
             <img src="${posts[i].image}" />
           </a>
           <h2 class="title">${posts[i].title.substring(0,50) + ' ....'}</h2>
@@ -37,8 +37,6 @@ for(let i = 0;i < posts.length;i++){
     `;
     blog_posts.appendChild(newDiv)
 }
-
-//function add the menu icon and remove close icon
 
 function openSidebar() {
     sidebar.style.display = "flex";

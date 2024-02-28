@@ -88,13 +88,10 @@ function addBlog(posts){
 function getBlogs(){
   return JSON.parse(localStorage.getItem("Blogs"));
 }
-console.log("Retrieving blogs from local storage...");
-const blogs = getBlogs();
-console.log("Retrieved blogs:", blogs);
 document.getElementById("add_article").addEventListener("click",(e)=>{
   let currentData = new Date();
   let newPost =  {
-    id:1,
+    id : generateUniqueId(),
     title:titleInput.value,
     image:imageData,
     description: description.getData(),
@@ -103,6 +100,9 @@ document.getElementById("add_article").addEventListener("click",(e)=>{
     comments:[],
     likes: []
   };
+  function generateUniqueId() {
+    return '_' + Math.random().toString(36).substring(2, 11);
+  }
   let blogs = getBlogs();
   blogs.push(newPost);
   addBlog(blogs);
