@@ -69,21 +69,16 @@ function previewImage(event) {
 
 var posts = [{
   id:1,
-  image:"",
-  description:"ksbzdjkjjksefc",
+  title:"The quickest way to deliver your message? Make visual",
+  image:"./WhatsApp Image 2023-12-28 at 11.53.39 AM.jpeg",
+  description:"In publishing and graphic design, Lorem ipsum is a placeholder textcommonly used to demonstrate the visual form of a document or a typeface without relying on mean",
   author: {
-    authorProfile:"gsgx",
-    authorName:"Kapucino"
+    authorProfile:"./person_1 1.svg",
+    authorName:"John Doe",
+    authorPosition:"CEO and Founder"
   },
-  date:"kaehb",
-  comments:[
-    {
-      comentorProfile: "",
-      commentorName:"",
-      date:"",
-      commentContent:""
-    }
-  ]  
+  date:new Date(),
+  comments:[]  
 
 }];
 
@@ -108,5 +103,9 @@ document.getElementById("add_article").addEventListener("click",(e)=>{
     comments:[],
     likes: []
   };
-  console.log(newPost); 
+  let blogs = getBlogs();
+  blogs.push(newPost);
+  addBlog(blogs);
+  console.log(blogs);
+  window.location.reload();
 })

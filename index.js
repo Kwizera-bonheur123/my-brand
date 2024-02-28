@@ -10,16 +10,10 @@ for(let i = 0;i < posts.length;i++){
     newDiv.classList.add("item");
     newDiv.innerHTML = `
     <a href="./signle_blog.html">
-            <img src="./WhatsApp Image 2023-12-28 at 11.53.39 AM.jpeg" />
+            <img src="${posts[i].image}" />
           </a>
-          <h2 class="title">
-            The quickest way to deliver your message? Make visual
-          </h2>
-          <p class="description">
-            In publishing and graphic design, Lorem ipsum is a placeholder text
-            commonly used to demonstrate the visual form of a document or a
-            typeface without relying on mean.......
-          </p>
+          <h2 class="title">${posts[i].title}</h2>
+          <p class="description">${posts[i].description}</p>
           <div class="footer">
             <div class="profile">
               <img src="./person_1 1.svg" />
@@ -40,7 +34,7 @@ for(let i = 0;i < posts.length;i++){
             </div>
           </div>
     `;
-    blog_posts.appendChild(newDiv);
+    blog_posts.appendChild(newDiv)
 }
 
 //function add the menu icon and remove close icon
