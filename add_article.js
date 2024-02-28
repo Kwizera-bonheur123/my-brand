@@ -1,12 +1,19 @@
 var imageInput = document.getElementById("input-file");
     var titleInput = document.getElementById("title");
+    var imageData;
     CKEDITOR.replace("content");
     var description = CKEDITOR.instances.content;
-
-    imageInput.addEventListener("change", (e)=>{
-      const image = e.target.result;
-      console.log(image); 
-    })
+    imageInput.addEventListener("change", (e) => {
+      var image = imageInput.files[0];
+      console.log(image);
+      
+      const reader = new FileReader();
+      reader.onload = function(event) {
+          imageData = event.target.result;;
+      };
+      
+      reader.readAsDataURL(image);
+  });
     
 function validateForm() {
     var imageErrorMessage = document.getElementById("image-error-message");
@@ -59,7 +66,47 @@ function previewImage(event) {
     reader.readAsDataURL(file);
 } 
 
+
+var posts = [{
+  id:1,
+  image:"",
+  description:"ksbzdjkjjksefc",
+  author: {
+    authorProfile:"gsgx",
+    authorName:"Kapucino"
+  },
+  date:"kaehb",
+  comments:[
+    {
+      comentorProfile: "",
+      commentorName:"",
+      date:"",
+      commentContent:""
+    }
+  ]  
+
+}];
+
+function addBlog(posts){
+  localStorage.setItem("Blogs", JSON.stringify(posts));
+}
+function getBlogs(){
+  return JSON.parse(localStorage.getItem("Blogs"));
+}
+console.log("Retrieving blogs from local storage...");
+const blogs = getBlogs();
+console.log("Retrieved blogs:", blogs);
 document.getElementById("add_article").addEventListener("click",(e)=>{
-  console.log("try file input");
-  
+  let currentData = new Date();
+  let newPost =  {
+    id:1,
+    title:titleInput.value,
+    image:imageData,
+    description: description.getData(),
+    author: {},
+    date: currentData,
+    comments:[],
+    likes: []
+  };
+  console.log(newPost); 
 })

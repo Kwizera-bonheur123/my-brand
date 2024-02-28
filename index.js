@@ -1,6 +1,47 @@
 var sidebar = document.getElementById("nav-container");
 var close = document.getElementById("close");
 var open = document.getElementById("open");
+var posts = JSON.parse(localStorage.getItem("Blogs"));
+
+
+var blog_posts = document.getElementById("blog-posts");
+for(let i = 0;i < posts.length;i++){
+    let newDiv = document.createElement("div");
+    newDiv.classList.add("item");
+    newDiv.innerHTML = `
+    <a href="./signle_blog.html">
+            <img src="./WhatsApp Image 2023-12-28 at 11.53.39 AM.jpeg" />
+          </a>
+          <h2 class="title">
+            The quickest way to deliver your message? Make visual
+          </h2>
+          <p class="description">
+            In publishing and graphic design, Lorem ipsum is a placeholder text
+            commonly used to demonstrate the visual form of a document or a
+            typeface without relying on mean.......
+          </p>
+          <div class="footer">
+            <div class="profile">
+              <img src="./person_1 1.svg" />
+              <div>
+                <h2 class="writter-name">John Doe</h2>
+                <h2 class="writter-position">CEO and Founder</h2>
+              </div>
+            </div>
+            <div class="reaction">
+              <div class="like">
+                <i class="fa-solid fa-thumbs-up"></i>
+                <p>521</p>
+              </div>
+              <div class="like">
+                <i class="fa-solid fa-comment"></i>
+                <p>450</p>
+              </div>
+            </div>
+          </div>
+    `;
+    blog_posts.appendChild(newDiv);
+}
 
 //function add the menu icon and remove close icon
 
@@ -70,13 +111,8 @@ function validateForm() {
     } else {
         messageError.innerText = "";
     }
-
-    // If all fields are valid, submit the form
-    if (isValid) {
-        // Here you can submit the form or perform any other action
-        alert("Form submitted successfully!");
-    }
 }
+
 
 
 let blogs = document.querySelectorAll('.my-blog .slider .item');
