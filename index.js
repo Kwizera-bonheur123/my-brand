@@ -10,7 +10,7 @@ for(let i = 0;i < posts.length;i++){
     let newDiv = document.createElement("div");
     newDiv.classList.add("item");
     newDiv.innerHTML = `
-    <a href="#" onclick="window.location.href = 'signle_blog.html'; return false;">
+    <a href="#" onclick="window.location.href = 'signle_blog.html?id=${posts[i].id}'; return false;">
             <img src="${posts[i].image}" />
           </a>
           <h2 class="title">${posts[i].title.substring(0,50) + ' ....'}</h2>
