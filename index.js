@@ -4,11 +4,10 @@ var sidebar = document.getElementById("nav-container");
 var close = document.getElementById("close");
 var open = document.getElementById("open");
 var posts = JSON.parse(localStorage.getItem("Blogs"));
-console.log(posts)
+
 
 var blog_posts = document.getElementById("blog-posts");
 for(let i = 0;i < posts.length;i++){
-    console.log(posts[i].description);
     let newDiv = document.createElement("div");
     newDiv.classList.add("item");
     newDiv.innerHTML = `

@@ -549,12 +549,6 @@ html {
     align-items: center;
   }
 
-  .blogs{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-top: 3%;
-  }
   .contact{
     padding: 4% 6%;
     background-color: var(--secondary);
@@ -912,4 +906,34 @@ html {
     .single_blog .card .title{
       font-size:25px;
     }
+    .item{
+      width: 320px;
+    }
+    .my-blog{
+      padding: auto;
+    }
+    .my-blog .slider #next-blog,.my-blog .slider #prev-blog{
+      top:540%;
+      left: 40%;
+    }
+    .my-blog .slider #next-blog{
+      left: initial;
+      right: 40%;
+  }
+  .item img{
+    height: 200px;
+  }
+  .item .title{
+    font-size: 18px;
+    height: 55px;
+    margin-bottom: 0.5%;
+  }
+  .item .description{
+    font-size: 12px;
+  }
+  .item .profile img{
+    width: 40px;
+    height: 40px;
+  }
+    
 }

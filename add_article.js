@@ -5,7 +5,6 @@ var imageInput = document.getElementById("input-file");
     var description = CKEDITOR.instances.content;
     imageInput.addEventListener("change", (e) => {
       var image = imageInput.files[0];
-      
       const reader = new FileReader();
       reader.onload = function(event) {
           imageData = event.target.result;;
@@ -80,6 +79,7 @@ var posts = [{
   comments:[]  
 
 }];
+
 
 function addBlog(posts){
   localStorage.setItem("Blogs", JSON.stringify(posts));
