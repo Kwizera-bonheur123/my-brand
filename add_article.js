@@ -5,7 +5,6 @@ var imageInput = document.getElementById("input-file");
     var description = CKEDITOR.instances.content;
     imageInput.addEventListener("change", (e) => {
       var image = imageInput.files[0];
-      console.log(image);
       
       const reader = new FileReader();
       reader.onload = function(event) {

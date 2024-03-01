@@ -1,3 +1,5 @@
+CKEDITOR.replace("content");
+var message = CKEDITOR.instances.message;
 var sidebar = document.getElementById("nav-container");
 var close = document.getElementById("close");
 var open = document.getElementById("open");
@@ -73,7 +75,6 @@ function myFunction() {
 function validateForm() {
     var name = document.getElementById('name').value.trim();
     var email = document.getElementById('email').value.trim();
-    var message = document.getElementById('message').value.trim();
 
     var nameError = document.getElementById('name-error-message');
     var emailError = document.getElementById('email-error-message');
@@ -98,11 +99,12 @@ function validateForm() {
     }
 
     // Validate message: should be at least 4 characters long
-    if (message.length < 4) {
-        messageError.innerText = "Message must be at least 4 characters long";
+    if (message.getData().trim() === "") {
+        messageError.innerText = "Please enter a message.";
         isValid = false;
-    } else {
-        messageError.innerText = "";
+    }  else if(description.getData().length < 13){
+        messageError.innerHTML = "Message must have more then 5 characters.";
+      isValid = false;
     }
 }
 
