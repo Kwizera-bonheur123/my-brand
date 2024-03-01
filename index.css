@@ -737,7 +737,7 @@ html {
   }
   
   .comment-form input[type="text"]::placeholder {
-    color: #ABABAB;
+    color: #e0e0e0;
   }
   
   .comment-buttons {
