@@ -5,7 +5,7 @@ var close = document.getElementById("close");
 var open = document.getElementById("open");
 var posts = JSON.parse(localStorage.getItem("Blogs"));
 
-
+console.log(posts);
 var blog_posts = document.getElementById("blog-posts");
 for(let i = 0;i < posts.length;i++){
     let newDiv = document.createElement("div");
@@ -31,7 +31,7 @@ for(let i = 0;i < posts.length;i++){
               </div>
               <div class="like">
                 <i class="fa-solid fa-comment"></i>
-                <p>450</p>
+                <p>${posts[i].comments.length}</p>
               </div>
             </div>
           </div>
@@ -190,4 +190,3 @@ let blogs = document.querySelectorAll('.my-blog .slider .item');
             loadShow();
         }
     });
-    
