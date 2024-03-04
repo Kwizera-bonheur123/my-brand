@@ -11,7 +11,7 @@ blogs.map((item) => {
                 <td>${item.title.substring(0,45) + '...'}</td>
                 <td>${item.description.substring(0,100) + '...'}</td>
                 <td>${item.author.authorName}</td>
-                <td>100</td>
+                <td>${item.likes.length}</td>
                 <td>${item.comments.length}</td>
                 <td class="actions">
                   <button>
