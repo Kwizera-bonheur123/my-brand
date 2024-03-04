@@ -110,6 +110,7 @@ var posts = [{
 function addBlog(posts){
   localStorage.setItem("Blogs", JSON.stringify(posts));
 }
+addBlog(posts);
 function getBlogs(){
   return JSON.parse(localStorage.getItem("Blogs"));
 }
