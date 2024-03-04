@@ -383,6 +383,7 @@ html {
     height: fit-content;
     text-align: justify;
     background-color: var(--third);
+    border: 2px solid rgb(168, 160, 160);
     border-radius: 12px;
     padding: 20px;
     padding: 2% 1%;

@@ -66,7 +66,35 @@ function previewImage(event) {
 
 
 var posts = [{
-  id:1,
+  id:"1",
+  title:"The quickest way to deliver your message? Make visual",
+  image:"./WhatsApp Image 2023-12-28 at 11.53.39 AM.jpeg",
+  description:"In publishing and graphic design, Lorem ipsum is a placeholder textcommonly used to demonstrate the visual form of a document or a typeface without relying on mean",
+  author: {
+    authorProfile:"./person_1 1.svg",
+    authorName:"John Doe",
+    authorPosition:"CEO and Founder"
+  },
+  date:new Date(),
+  comments:[]  
+
+},
+{
+  id:"3",
+  title:"The quickest way to deliver your message? Make visual",
+  image:"./WhatsApp Image 2023-12-28 at 11.53.39 AM.jpeg",
+  description:"In publishing and graphic design, Lorem ipsum is a placeholder textcommonly used to demonstrate the visual form of a document or a typeface without relying on mean",
+  author: {
+    authorProfile:"./person_1 1.svg",
+    authorName:"John Doe",
+    authorPosition:"CEO and Founder"
+  },
+  date:new Date(),
+  comments:[]  
+
+},
+{
+  id:"2",
   title:"The quickest way to deliver your message? Make visual",
   image:"./WhatsApp Image 2023-12-28 at 11.53.39 AM.jpeg",
   description:"In publishing and graphic design, Lorem ipsum is a placeholder textcommonly used to demonstrate the visual form of a document or a typeface without relying on mean",
@@ -79,8 +107,6 @@ var posts = [{
   comments:[]  
 
 }];
-
-
 function addBlog(posts){
   localStorage.setItem("Blogs", JSON.stringify(posts));
 }
@@ -104,7 +130,10 @@ document.getElementById("add_article").addEventListener("click",(e)=>{
   }
   let blogs = getBlogs();
   blogs.push(newPost);
-  addBlog(blogs);
   console.log(blogs);
-  window.location.reload();
+  addBlog(blogs);
+  alert("New Blog added successfully ....");
+  titleInput.value = "";
+  imageData = "";
+  description.getData = "";
 })
