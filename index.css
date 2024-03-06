@@ -394,7 +394,7 @@ html {
 
 .my-blog .slider #next-blog,.my-blog .slider #prev-blog{
     position: absolute;
-    top: 484%;
+    top: 510%;
     color: #fff;
     background-color: transparent;
     border: none;
@@ -407,10 +407,27 @@ html {
     left: unset;
     right: 10%;
 }
+#next-project,#prev-project{
+  background-color: green;
+  position: relative;
+    top: 30%;
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    font-size: xxx-large;
+    font-family: monospace;
+    font-weight: bold;
+    left: 10%;
+}
+#next-project{
+  /* left: unset; */
+  left: 88%;
+  z-index: 99;
+}
 
 .item img{
     width: 100%;
-    max-height: 270px;
+    max-height: 240px;
   }
  .item .title{
     font-weight: medium;

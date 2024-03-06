@@ -110,10 +110,6 @@ var posts = [{
 function addBlog(posts){
   localStorage.setItem("Blogs", JSON.stringify(posts));
 }
-<<<<<<< HEAD
-=======
-localStorage.removeItem("Blogs");
->>>>>>> 1cd6ae238c12e2736df6a285f61031bb2c136fa1
 addBlog(posts);
 function getBlogs(){
   return JSON.parse(localStorage.getItem("Blogs"));
