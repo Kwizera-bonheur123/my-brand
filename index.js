@@ -5,8 +5,12 @@ var close = document.getElementById("close");
 var open = document.getElementById("open");
 var posts = JSON.parse(localStorage.getItem("Blogs"));
 
+function generateUniqueId() {
+  return '_' + Math.random().toString(36).substring(2, 11);
+}
+
 var posts = [{
-  id:"_tishhcvab",
+  id:generateUniqueId(),
   title:"The quickest way to deliver your message? Make visual",
   image:"./WhatsApp Image 2023-12-28 at 11.53.39 AM.jpeg",
   description:"In publishing and graphic design, Lorem ipsum is a placeholder textcommonly used to demonstrate the visual form of a document or a typeface without relying on mean",
@@ -16,11 +20,12 @@ var posts = [{
     authorPosition:"CEO and Founder"
   },
   date:new Date(),
-  comments:[]  
+  comments:[],
+  likes: [] 
 
 },
 {
-  id:"_rgypd5i27",
+  id:generateUniqueId(),
   title:"The quickest way to deliver your message? Make visual",
   image:"./WhatsApp Image 2023-12-28 at 11.53.39 AM.jpeg",
   description:"In publishing and graphic design, Lorem ipsum is a placeholder textcommonly used to demonstrate the visual form of a document or a typeface without relying on mean",
@@ -30,11 +35,12 @@ var posts = [{
     authorPosition:"CEO and Founder"
   },
   date:new Date(),
-  comments:[]  
+  comments:[],
+  likes: []
 
 },
 {
-  id:"_hwwbazf3k",
+  id:generateUniqueId(),
   title:"The quickest way to deliver your message? Make visual",
   image:"./WhatsApp Image 2023-12-28 at 11.53.39 AM.jpeg",
   description:"In publishing and graphic design, Lorem ipsum is a placeholder textcommonly used to demonstrate the visual form of a document or a typeface without relying on mean",
@@ -44,9 +50,11 @@ var posts = [{
     authorPosition:"CEO and Founder"
   },
   date:new Date(),
-  comments:[]  
+  comments:[],
+  likes: []
 
 }];
+
 function addBlog(posts){
   localStorage.setItem("Blogs", JSON.stringify(posts));
 }

@@ -12,6 +12,7 @@ var imageInput = document.getElementById("input-file");
       
       reader.readAsDataURL(image);
   });
+
     
 function validateForm() {
     var imageErrorMessage = document.getElementById("image-error-message");
@@ -65,48 +66,6 @@ function previewImage(event) {
 } 
 
 
-var posts = [{
-  id:"_tishhcvab",
-  title:"The quickest way to deliver your message? Make visual",
-  image:"./WhatsApp Image 2023-12-28 at 11.53.39 AM.jpeg",
-  description:"In publishing and graphic design, Lorem ipsum is a placeholder textcommonly used to demonstrate the visual form of a document or a typeface without relying on mean",
-  author: {
-    authorProfile:"./person_1 1.svg",
-    authorName:"John Doe",
-    authorPosition:"CEO and Founder"
-  },
-  date:new Date(),
-  comments:[]  
-
-},
-{
-  id:"_rgypd5i27",
-  title:"The quickest way to deliver your message? Make visual",
-  image:"./WhatsApp Image 2023-12-28 at 11.53.39 AM.jpeg",
-  description:"In publishing and graphic design, Lorem ipsum is a placeholder textcommonly used to demonstrate the visual form of a document or a typeface without relying on mean",
-  author: {
-    authorProfile:"./person_1 1.svg",
-    authorName:"John Doe",
-    authorPosition:"CEO and Founder"
-  },
-  date:new Date(),
-  comments:[]  
-
-},
-{
-  id:"_hwwbazf3k",
-  title:"The quickest way to deliver your message? Make visual",
-  image:"./WhatsApp Image 2023-12-28 at 11.53.39 AM.jpeg",
-  description:"In publishing and graphic design, Lorem ipsum is a placeholder textcommonly used to demonstrate the visual form of a document or a typeface without relying on mean",
-  author: {
-    authorProfile:"./person_1 1.svg",
-    authorName:"John Doe",
-    authorPosition:"CEO and Founder"
-  },
-  date:new Date(),
-  comments:[]  
-
-}];
 function addBlog(posts){
   localStorage.setItem("Blogs", JSON.stringify(posts));
 }
@@ -114,6 +73,10 @@ addBlog(posts);
 function getBlogs(){
   return JSON.parse(localStorage.getItem("Blogs"));
 }
+function generateUniqueId() {
+  return '_' + Math.random().toString(36).substring(2, 11);
+}
+console.log(generateUniqueId());
 document.getElementById("add_article").addEventListener("click",(e)=>{
   let currentData = new Date();
   let newPost =  {
@@ -126,9 +89,7 @@ document.getElementById("add_article").addEventListener("click",(e)=>{
     comments:[],
     likes: []
   };
-  function generateUniqueId() {
-    return '_' + Math.random().toString(36).substring(2, 11);
-  }
+  
   let blogs = getBlogs();
   blogs.push(newPost);
   console.log(blogs);
