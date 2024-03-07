@@ -61,7 +61,7 @@ function addBlog(posts){
   localStorage.setItem("Blogs", JSON.stringify(posts));
 }
 addBlog(posts);
-
+//add new blog in localStorage
 var blog_posts = document.getElementById("blog-posts");
 for(let i = 0;i < posts.length;i++){
     let newDiv = document.createElement("div");
