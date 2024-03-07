@@ -5,7 +5,53 @@ var close = document.getElementById("close");
 var open = document.getElementById("open");
 var posts = JSON.parse(localStorage.getItem("Blogs"));
 
-console.log(posts);
+var posts = [{
+  id:"_tishhcvab",
+  title:"The quickest way to deliver your message? Make visual",
+  image:"./WhatsApp Image 2023-12-28 at 11.53.39 AM.jpeg",
+  description:"In publishing and graphic design, Lorem ipsum is a placeholder textcommonly used to demonstrate the visual form of a document or a typeface without relying on mean",
+  author: {
+    authorProfile:"./person_1 1.svg",
+    authorName:"John Doe",
+    authorPosition:"CEO and Founder"
+  },
+  date:new Date(),
+  comments:[]  
+
+},
+{
+  id:"_rgypd5i27",
+  title:"The quickest way to deliver your message? Make visual",
+  image:"./WhatsApp Image 2023-12-28 at 11.53.39 AM.jpeg",
+  description:"In publishing and graphic design, Lorem ipsum is a placeholder textcommonly used to demonstrate the visual form of a document or a typeface without relying on mean",
+  author: {
+    authorProfile:"./person_1 1.svg",
+    authorName:"John Doe",
+    authorPosition:"CEO and Founder"
+  },
+  date:new Date(),
+  comments:[]  
+
+},
+{
+  id:"_hwwbazf3k",
+  title:"The quickest way to deliver your message? Make visual",
+  image:"./WhatsApp Image 2023-12-28 at 11.53.39 AM.jpeg",
+  description:"In publishing and graphic design, Lorem ipsum is a placeholder textcommonly used to demonstrate the visual form of a document or a typeface without relying on mean",
+  author: {
+    authorProfile:"./person_1 1.svg",
+    authorName:"John Doe",
+    authorPosition:"CEO and Founder"
+  },
+  date:new Date(),
+  comments:[]  
+
+}];
+function addBlog(posts){
+  localStorage.setItem("Blogs", JSON.stringify(posts));
+}
+addBlog(posts);
+
 var blog_posts = document.getElementById("blog-posts");
 for(let i = 0;i < posts.length;i++){
     let newDiv = document.createElement("div");
