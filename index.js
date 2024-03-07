@@ -9,6 +9,8 @@ function generateUniqueId() {
   return '_' + Math.random().toString(36).substring(2, 11);
 }
 
+localStorage.removeItem("Blogs");
+
 var posts = [{
   id:generateUniqueId(),
   title:"The quickest way to deliver your message? Make visual",
